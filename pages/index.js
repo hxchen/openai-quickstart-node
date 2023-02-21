@@ -40,16 +40,17 @@ export default function Home() {
 
       <main className={styles.main}>
         <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <h3>What do you want to say</h3>
         <form onSubmit={onSubmit}>
-          <input
-            type="text"
+          <textarea
+            rows = "10"
+            cols = "50"
             name="animal"
-            placeholder="Enter an animal"
+            placeholder="Enter your text"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
-          />
-          <input type="submit" value="Generate names" />
+          ></textarea>
+          <input type="submit" value="Submit" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
