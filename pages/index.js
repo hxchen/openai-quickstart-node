@@ -40,17 +40,16 @@ export default function Home() {
 
       <main className={styles.main}>
         <img src="/dog.png" className={styles.icon} />
-        <h3>What do you want to say</h3>
+        <h3>你想获得什么建议?</h3>
         <form onSubmit={onSubmit}>
-          <textarea
-            rows = "10"
-            cols = "50"
+          <input
+            type="text"
             name="animal"
-            placeholder="Enter your text"
+            placeholder="写出来你的问题"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
-          ></textarea>
-          <input type="submit" value="Submit" />
+          />
+          <input type="submit" value="提交" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
